@@ -32,5 +32,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="点击登录"/>
+    <Button
+        android:id="@+id/goto_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击跳转到数据库操作活动"/>
 
 </LinearLayout>
