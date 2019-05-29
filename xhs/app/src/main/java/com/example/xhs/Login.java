@@ -1,5 +1,6 @@
 package com.example.xhs;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -30,5 +31,19 @@ public class Login extends AppCompatActivity {
         rememberPass = (CheckBox)findViewById(R.id.remember_pass);
         userng = (Button)findViewById(R.id.user_g);
         login = (Button)findViewById(R.id.login);
+        //是否存储用户密码
+        boolean isRemember = pref.getBoolean("remember_pass",false);
+        if (isRemember){
+            //存储
+            String username = pref.getString("username","");
+            String password = pref.getString("password","");
+            //记住密码
+            usernameEdit.setText(username);
+            passwordEdit.setText(password);
+            //默认被勾选
+            rememberPass.setChecked(true);
+
+
+        }
     }
 }
